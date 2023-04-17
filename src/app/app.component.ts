@@ -25,6 +25,19 @@ export class AppComponent implements OnDestroy, OnInit {
     ev2Status: false,
     tf3Position: 0,
     h2oLevel: 0,
+    machineryEmunted: 0,
+    piezoEmunted: 0,
+    mediumFlow: 0,
+    dailyFlow: 0,
+    batteryLevel: 0,
+    powerSupply: 'network',
+    fcZs1: false,
+    fcUp: false,
+    fcDown: false,
+    fs1Counter: 0,
+    tankLoStatus: false,
+    pumpCounter: 0,
+    tankStatus: false,
   });
 
   private formSub = Subscription.EMPTY;

@@ -13,16 +13,44 @@
     </mat-form-field>
   </div>
   <div>
-    <mat-slide-toggle formControlName="ev1Status">Stato EV1</mat-slide-toggle>
+    <mat-form-field>
+      <mat-label>Livello batteria</mat-label>
+      <input matInput type="number" min="0" max="1" step="0.01" formControlName="batteryLevel">
+    </mat-form-field>
   </div>
   <div>
-    <mat-slide-toggle formControlName="ev2Status">Stato EV2</mat-slide-toggle>
+    <label>Alimentazione</label>
+    <mat-radio-group labelPosition="after" formControlName="powerSupply">
+      <mat-radio-button value="solar">Pannello solare</mat-radio-button>
+      <mat-radio-button value="network">Rete</mat-radio-button>
+    </mat-radio-group>
   </div>
   <div>
     <mat-slide-toggle formControlName="arrowUpStatus">Stato freccia su</mat-slide-toggle>
   </div>
   <div>
     <mat-slide-toggle formControlName="arrowDownStatus">Stato freccia giù</mat-slide-toggle>
+  </div>
+  <div>
+    <mat-slide-toggle formControlName="ev1Status">Stato EV1</mat-slide-toggle>
+  </div>
+  <div>
+    <mat-slide-toggle formControlName="ev2Status">Stato EV2</mat-slide-toggle>
+  </div>
+  <div>
+    <mat-slide-toggle formControlName="fcZs1">FC-ZS1</mat-slide-toggle>
+  </div>
+  <div>
+    <mat-slide-toggle formControlName="fcUp">FC-Up</mat-slide-toggle>
+  </div>
+  <div>
+    <mat-slide-toggle formControlName="fcDown">FC-Down</mat-slide-toggle>
+  </div>
+  <div>
+    <mat-slide-toggle formControlName="tankLoStatus">Serbatoio Lo</mat-slide-toggle>
+  </div>
+  <div>
+    <mat-slide-toggle formControlName="tankStatus">Serbatoio</mat-slide-toggle>
   </div>
   <div>
     <mat-form-field>
@@ -33,7 +61,43 @@
   <div>
     <mat-form-field>
       <mat-label>Livello H2O</mat-label>
-      <input matInput type="number" formControlName="h2oLevel">
+      <input matInput type="number" min="0" formControlName="h2oLevel">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Contatore FS-01</mat-label>
+      <input matInput type="number" min="0" step="1" formControlName="fs1Counter">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Contatore pompa</mat-label>
+      <input matInput type="number" min="0" step="1" formControlName="pumpCounter">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Totale emunto macchina</mat-label>
+      <input matInput type="number" min="0" formControlName="machineryEmunted">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Totale emunto piezometro</mat-label>
+      <input matInput type="number" min="0" formControlName="piezoEmunted">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Portata media emunta</mat-label>
+      <input matInput type="number" min="0" formControlName="mediumFlow">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Portata giornaliera</mat-label>
+      <input matInput type="number" min="0" formControlName="dailyFlow">
     </mat-form-field>
   </div>
 </div>
