@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+
+  app-hyrec-pid {
+    flex: 1 0 auto;
+  }
+
+  > div {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    padding: 1em;
+  }
+
+  .mat-mdc-slide-toggle {
+    margin: 1em 0;
+  }
+}
