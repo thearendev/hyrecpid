@@ -22,4 +22,5 @@ export interface HyrecStatus {
   tankLoStatus: boolean;
   pumpCounter: number;
   tankStatus: boolean;
+  bulkUnload: boolean;
 }

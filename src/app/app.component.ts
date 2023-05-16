@@ -38,6 +38,7 @@ export class AppComponent implements OnDestroy, OnInit {
     tankLoStatus: false,
     pumpCounter: 0,
     tankStatus: false,
+    bulkUnload: true,
   });
 
   private formSub = Subscription.EMPTY;

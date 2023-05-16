@@ -183,6 +183,11 @@ export class HyrecPidComponent {
     return this._tankColor;
   }
 
+  private _bulkUnload = true;
+  get bulkUnload(): boolean {
+    return this._bulkUnload;
+  }
+
   private updateData(status?: Partial<HyrecStatus>): void {
     status = status || {};
     this._idPiezo = status.idPiezo || '';
@@ -206,5 +211,6 @@ export class HyrecPidComponent {
     this._tankLoColor = indicatorStatus(status.tankLoStatus);
     this._pumpCounter = formatCounter(status.pumpCounter);
     this._tankColor = toggleStatus(status.tankStatus);
+    this._bulkUnload = status.bulkUnload || false;
   }
 }
